@@ -1,15 +1,21 @@
 import "./App.css";
 import { useEffect, useState } from "react";
+import { UseDispatch, useDispatch, useSelector } from "react-redux";
+import { GetTodos } from "./Redux/Slices/todos/getList";
+import TodosPage from "./Pages/Home/TodosPage";
 function App() {
-  const [data, setData] = useState();
+  const dispatch = useDispatch();
+  const { Todos, loading } = useSelector((state) => state.GetTodosSlice);
+
   useEffect(() => {
-    fetch('https://jsonplaceholder.typicode.com/todos')
-      .then(response => response.json())
-      .then(json => console.log(json))
-  }, []);
+    dispatch(GetTodos());
+  }, [0]);
   return (
-    <div className="bg-black ">
-      <h1>hello</h1>
+    <div className="flex flex-col justify-center items-center">
+      
+      <div className="h-[70vh] w-[70%]">
+        <TodosPage data={Todos} loading={loading} />
+      </div>
     </div>
   );
 }
