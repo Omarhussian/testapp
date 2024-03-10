@@ -1,4 +1,3 @@
-import "./App.css";
 import { useEffect, useState } from "react";
 import { UseDispatch, useDispatch, useSelector } from "react-redux";
 import { GetTodos } from "./Redux/Slices/todos/getList";
