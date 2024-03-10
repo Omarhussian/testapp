@@ -11,9 +11,8 @@ function App() {
     dispatch(GetTodos());
   }, [0]);
   return (
-    <div className="flex flex-col justify-center items-center">
-      
-      <div className="h-[70vh] w-[70%]">
+    <div className="h-screen flex items-center"> 
+      <div className=" flex items-center justify-center w-full ">
         <TodosPage data={Todos} loading={loading} />
       </div>
     </div>
