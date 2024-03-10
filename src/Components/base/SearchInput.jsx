@@ -4,7 +4,6 @@ import { Input, Button } from 'antd';
 const { Search } = Input;
 
 const SearchInput = ({ onSearch }) => {
-
     const handleSearch = _debounce((searchTerm) => {
         onSearch(searchTerm);
     }, 300);
