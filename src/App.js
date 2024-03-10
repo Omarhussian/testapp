@@ -8,7 +8,7 @@ function App() {
       .then(json => console.log(json))
   }, []);
   return (
-    <div>
+    <div className="bg-black ">
       <h1>hello</h1>
     </div>
   );

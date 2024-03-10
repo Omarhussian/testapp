@@ -1,13 +1,13 @@
 import axios from 'axios';
 // import { toast } from "react-toastify";
 
-const url = 'https://jsonplaceholder.typicode.com/todos'
+const url = 'https://jsonplaceholder.typicode.com/'
 
 export const API = axios.create({
   baseURL: url,
 })
 
-
+//! handle error
 export const handleError = (error, toast) => {
   if (error.response?.data) {
     let errorMessage;
