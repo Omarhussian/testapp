@@ -26,7 +26,7 @@ const DetailsModal = ({ isDetialsOpen, setIsDetialsOpen, selectedTask }) => {
                     </div>
                     <div className="p-4 flex flex-col gap-y-4 items-start justify-start">
                         <div className="flex w-full  items-center gap-x-2">
-                            <span className=''>{selectedTask.title}</span>
+                            <span title={selectedTask.title} className='line-clamp-1'>{selectedTask.title}</span>
                         </div>
 
                         <div className="flex items-center gap-x-2">
